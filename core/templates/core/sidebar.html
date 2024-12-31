@@ -1,0 +1,18 @@
+{%load static%}
+<div class="border-end border-warning vh-100">
+    <div class="text-center">
+      <img
+        src="{% static 'core/images/pho.jpg' %}"
+        alt="Photo"
+        class="img-fluid rounded-circle mt-5 width='100px' height='10px'"
+      />
+      <h3 class="mt-3 text-light fw-bold">Debasish</h3>
+    </div>
+    <hr class="border-light" />
+    <nav class="nav flex-column text-center">
+      <a href="{%url 'home'%}" class="nav-link {{home}}">Home</a>
+      <a href="{% url 'services'%}" class="nav-link {{serv}}">Services</a>
+      <a href="{%url 'skill'%}" class="nav-link {{skill}}"> Skills </a>
+      <a href="{%url 'contact'%}" class="nav-link {{contact}}">Contact Us</a>
+    </nav>
+  </div>

@@ -1,0 +1,68 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container mt-3">
+    <h1 class="text-warning mb-3 border-bottom">CONTACT US</h1>
+    <div class="row text-light mb-5">
+        <p class="mx-auto mb-5 text-center">
+            Do you have any questions? Please contact us. We'd love to hear from you!
+        </p>
+        <div class="col-sm-9 mx-auto">
+            <form action="" method="post" class="bg-dark p-4 rounded">
+                {% csrf_token %}
+                <!-- Name and Email fields in one row -->
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="inputName" name="name" placeholder="Your Name" required />
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputEmail" class="form-label">Your Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Your Email" required />
+                    </div>
+                </div>
+                <!-- Subject field -->
+                <div class="form-group mb-3">
+                    <label for="inputSubject" class="form-label">Your Subject</label>
+                    <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="Your Subject" required />
+                </div>
+                <!-- Message field -->
+                <div class="form-group mb-4">
+                    <label for="inputMessage" class="form-label">Your Message *</label>
+                    <textarea class="form-control" id="inputMessage" name="message" rows="5" placeholder="Your message *" required></textarea>
+                </div>
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-outline-warning w-50 text-center">
+                      Send Message
+                    </button>
+                  </div>
+        </div>
+        <div class="col-sm-3 text-center">
+            <ul class='list-unstyled'>
+                <li>
+                    <i class='fas fa-map-marker-alt fa-3x icon-color'></i>
+                    <p>123 Main St, City, State, ZIP</p>
+                </li>
+                <li>
+                    <i class='fas fa-phone fa-3x icon-color mt-4'></i>
+                    <p>7077862714</p>
+                </li>
+                <li>
+                    <i class='fas fa-envelope mt-5 fa-3x icon-color'></i>
+                    <p>djangoproject963@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center mb-2">
+       <a href="#" target="_blank"><i class="fab fa-twitter icon-color me-3 fa-2x"></i></a>
+       <a href="#" target="_blank"><i class="fab fa-facebook icon-color me-3 fa-2x"></i></a>
+       <a href="#" target="_blank"><i class="fab fa-instagram icon-color me-3 fa-2x"></i></a>
+       <a href="#" target="_blank"><i class="fab fa-linkedin icon-color me-3 fa-2x"></i></a>
+       <a href="#" target="_blank"><i class="fab fa-github icon-color me-3 fa-2x"></i></a>
+    </div>
+
+
+</div>
+{% endblock content %}
