@@ -14,7 +14,12 @@ html,body{
 }
 /*Services icon Color*/
 .icon-color {
-    color: #0a6847; /* Gold color */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .icon-color:hover {
+    transform: scale(1.2);
+    color: #fff200 !important; /* Brighter yellow or any color */
   }
 /*Services subtitle color*/
 .ss-color{
@@ -48,10 +53,10 @@ a.nav-link{
 }
 a.nav-link:hover{
     color:black;
-    background-color: #e9cd79;
+    /* background-color: #e9c250; */
 }
 a.nav-link.active{
     color:black;
     background-color: #ffc107;
-    font-weight: bold; 
+    /* font-weight: bold;  */
 }
